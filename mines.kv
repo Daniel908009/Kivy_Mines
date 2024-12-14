@@ -8,6 +8,7 @@
     grid: []
     mines: []
     flags: []
+    flagging: False
     time: 0
     Label:
         text: "Minesweeper"
@@ -24,6 +25,21 @@
         padding: 10
         rows: root.start_game(9, 9, 10)
         size_hint: (1, 1)
+
+    GridLayout:
+        cols: 2
+        size_hint: (1, 0.15)
+        padding: 10, 0
+        Button:
+            text: "Restart"
+            font_size: 20
+            on_press: root.restart_game()
+        Button:
+            id: flagging_button
+            text: "Flagging"
+            font_size: 20
+            background_color: (1,0,0,1)
+            on_press: root.toggle_flagging()
         
     GridLayout:
         cols: 3
