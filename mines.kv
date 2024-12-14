@@ -1,0 +1,36 @@
+<MainGrid>
+    cols: 1
+    padding: 10
+    number_of_flags: 0
+    number_of_columns: 0
+    number_of_rows: 0
+    grid: []
+    mines: []
+    flags: []
+    time: 0
+    Label:
+        text: "Minesweeper"
+        font_size: 30
+        size_hint: (1, 0.1)
+    GridLayout:
+        id: grid
+        cols: 10
+        padding: 10
+        rows: root.start_game(9, 9, 10)
+        size_hint: (1, 1)
+        
+    GridLayout:
+        cols: 3
+        size_hint: (1, 0.3)
+        padding: 10
+        Button:
+            text: "Small"
+            on_press: root.start_game(9, 9, 10)
+        Button:
+            text: "Medium"
+            on_press: root.start_game(16, 16, 40)
+        Button:
+            text: "Large"
+            on_press: root.start_game(20, 20, 99)
+
+<MineButton>
