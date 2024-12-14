@@ -1,9 +1,10 @@
+# the main grid of the app
 <MainGrid>
     cols: 1
     padding: 10
-    number_of_flags: 0
     number_of_columns: 0
     number_of_rows: 0
+    all_buttons_revealed: [] # this is used to stop the buttons from revealing each other infinitely causing a max recursion error
     grid: []
     mines: []
     flags: []
@@ -11,6 +12,11 @@
     Label:
         text: "Minesweeper"
         font_size: 30
+        size_hint: (1, 0.1)
+    Label:
+        id: time_label
+        text: "Time: 00:00"
+        font_size: 20
         size_hint: (1, 0.1)
     GridLayout:
         id: grid
@@ -25,12 +31,23 @@
         padding: 10
         Button:
             text: "Small"
-            on_press: root.start_game(9, 9, 10)
+            font_size: 20
+            color: (0,1,0,1)
+            on_press: root.start_game(9, 9, 25)
         Button:
             text: "Medium"
-            on_press: root.start_game(16, 16, 40)
+            font_size: 20
+            color: (0,0,1,1)
+            on_press: root.start_game(16, 16, 51)
         Button:
             text: "Large"
+            font_size: 20
+            color: (1,0,0,1)
             on_press: root.start_game(20, 20, 99)
 
+# this button ?class? represents the tiles in the grid
 <MineButton>
+    text: ""
+    font_size: 20
+    background_color: (0.5,0.5,0.5,1)
+    on_press: root.press()
