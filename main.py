@@ -99,7 +99,7 @@ class MainGrid(GridLayout):
         hours = int(self.time/3600)
         minutes = int((self.time - hours*3600)/60)
         seconds = int(self.time - hours*3600 - minutes*60)
-        self.ids.time_label.text = str(hours).zfill(2) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
+        self.ids.time_label.text = str(hours).zfill(2) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2) # zfill is a method that fills the string with zeros to the left
     # simple method to restart the game
     def restart_game(self):
         self.start_game(self.number_of_columns, self.number_of_rows, self.number_of_mines) # it is a bit useless because the player can reset the game by selecting the size of the board, however I didnt think about it and now its already done so might as well leave it here
