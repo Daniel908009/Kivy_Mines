@@ -2,7 +2,7 @@
 <p>This is a classic mines game, made in Kivy (naturaly resizable, multiplatform framework for Python).</p>
 
 ## Features
-<p>Three map sizes, restart button, flagging</p>
+<p>Three map sizes, restart button, flagging, timer</p>
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/ab828177-a333-4c66-9b0b-f48c04f34db2)
