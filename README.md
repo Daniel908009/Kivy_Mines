@@ -29,5 +29,5 @@ If you dont have git than first enter the folowing command: sudo apt install git
 Now open a console and enter the folowing code: pip install -r /path/to/requirements.txt <br>
 *Replace the /path/to/requirements.txt with the actual path. <br>
 <h2>Using Pypi</h2>
-simply open your command prompt and enter this command: pip install kivy_mines_package <br>
-then you can run it with this command:  python3 -m kivy_mines_package
+simply open your command prompt and enter this command: pip install kivy-mines-package <br>
+then you can run it with this command: kivy_mines_package
